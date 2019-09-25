@@ -41,7 +41,7 @@ export class MyTimerComponent implements OnInit {
     this.s = this.getSeconds(Time)
   }
 
-  public wait() {
+  public stop() {
     if(this.sub){
       this.paused = !this.paused;
     }
@@ -78,6 +78,6 @@ export class MyTimerComponent implements OnInit {
     if(num <=9 ) {
       return '0' + num;
     } else { return num}
-    //return num <= 9 ? '0' + num : num;
+    //return num <= 9 ? '0' + num : num; <- тернарно
   }
 }
